@@ -1,5 +1,40 @@
-$primary-color: #444;
+$primary-color: #1d8c2c;
+html {
+  font-size: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
 
 body {
-  background: $primary-color;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+}
+
+//headings
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 300;
+
+  &.header {
+    &__large {
+      font-size: 15rem;
+    }
+
+    &__medium {
+      font-size: 7.5rem;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+header {
+  text-align: center;
+  background: url(../dist/img/rice-2.jpg);
 }
