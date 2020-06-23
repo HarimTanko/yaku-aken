@@ -1,4 +1,6 @@
-$primary-color: #1d8c2c;
+@import "config";
+@import "menu";
+
 html {
   font-size: 10px;
 }
@@ -8,33 +10,207 @@ html {
 }
 
 body {
+  @include background;
   height: 100%;
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  line-height: 1.5;
+  line-height: 1.6;
+  color: #777;
 }
 
-//headings
 h1,
 h2,
 h3 {
   margin: 0;
-  font-weight: 300;
+}
 
-  &.header {
-    &__large {
-      font-size: 15rem;
+.landing {
+  display: flex;
+  flex-flow: column;
+  padding: 20rem 0 0 5rem;
+  height: 100%;
+  line-height: 1;
+  /* background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.657),
+      rgba(40, 180, 131, 0.65)
+    ),
+    url(../img/rice-2.jpg);*/
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+
+  &__text-lg {
+    font-size: 15rem;
+    font-weight: 300;
+    color: #fff;
+
+    span {
+      color: #d6ce78;
     }
+  }
 
-    &__medium {
-      font-size: 7.5rem;
-      margin-bottom: 3rem;
+  &__text-md {
+    font-size: 7.5rem;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 5rem;
+  }
+
+  &__text-sm {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 5rem;
+  }
+
+  &__btn {
+    background: #fff;
+    width: max-content;
+    font-size: 3rem;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    margin-top: 3rem;
+    color: #548056;
+
+    &:hover {
+      @include easeOut();
+    }
+  }
+
+  &__icons {
+    margin-top: 5rem;
+
+    a {
+      padding-right: 2rem;
+      color: #fff;
+
+      &:hover {
+        color: #8c6e15;
+        @include easeOut();
+      }
     }
   }
 }
 
-header {
+a {
+  text-decoration: none;
+}
+
+.header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+#home {
+}
+
+.head__picture {
+  height: 40vh;
+
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(126, 213, 111, 0.657),
+    rgba(40, 180, 131, 0.65)
+  );
+  margin: 1rem;
+  border-radius: 1rem;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(126, 213, 111, 0.657),
+    rgba(40, 180, 131, 0.65)
+  );
+  margin: 1rem;
+  border-radius: 1rem;
+
+  color: #333;
+  padding: 5rem;
+
+  p {
+    margin: 0 2rem;
+  }
+
+  &__item {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    height: min-content;
+  }
+
+  &__img {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem;
+    width: max-content;
+    margin: 1rem;
+
+    img {
+      width: 25rem;
+      height: 15rem;
+      border-radius: 1rem;
+      box-shadow: 1rem 3rem 6rem rgba($color: #000000, $alpha: 0.3);
+    }
+  }
+}
+
+.about__heading {
+  font-size: 12rem;
+  font-weight: 100;
+  color: #fff;
+  padding: 5px 5rem;
+  border-radius: 5px;
+  box-shadow: 0 5rem 5rem rgba($color: #000000, $alpha: 0.3);
+  border: 1px solid $gold-color;
+  background-color: #9ab59d;
+
+  span {
+    color: $gold-color;
+  }
+
+  &-2 {
+    font-size: 2.5rem;
+  }
+}
+
+.paragraph {
+  font-size: 1.5rem;
+}
+
+.about__features {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.feature-box {
+  background-image: linear-gradient(to right bottom, #7ed56fa8, #28b483a6);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  margin: 2rem;
   text-align: center;
-  background: url(../dist/img/rice-2.jpg);
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(#000000, 0.15);
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: translateY(-1rem);
+  }
+
+  &__icon {
+    color: $gold-color;
+  }
+}
+
+.header__logo {
+  height: 15rem;
+  margin-left: 2rem;
 }

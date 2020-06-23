@@ -1,0 +1,25 @@
+$primary-color: #6aa372;
+$secondary-color: #e7ebe0ff;
+$landing-color: #4e594f;
+$gold-color: #8c6e15;
+$light-green: #7ed56fa8;
+$dark-green: #28b483a6;
+$header-color: linear-gradient(to right bottom, #7ed56fa8, #28b483a6);
+$show-landing-image: true;
+$landing-image: linear-gradient(to right bottom, #7ed56fa8, #28b483a6),
+  url(../img/rice-2.jpg);
+$background-opacity: 0.9;
+
+@mixin easeOut {
+  transition: all 0.2s ease-out;
+}
+
+@mixin background {
+  @if $show-landing-image {
+    &#bg-img {
+      background: $landing-image;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  }
+}
