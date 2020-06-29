@@ -28,7 +28,7 @@ $background-opacity: 0.9;
   }
 }
 
-@mixin mediaSm {
+/*  @mixin mediaSm {
   @media screen and (max-width: 700px) {
     @content;
   }
@@ -55,5 +55,54 @@ $background-opacity: 0.9;
 @mixin mediaXl {
   @media screen and (min-width: 1200px) {
     @content;
+  }
+}
+
+*/
+
+// media query manager
+/*
+0-600px:      phone
+600-900px:    tablet portrait
+900-1200px:   tablet landscape
+[1200 - 1800] where normal styles apply
+
+1800 +        big desktop
+
+
+
+$breakpoint argument choices:
+-phone
+-tab-port
+-tab-land
+-big-desktop
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      //600px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    //900px
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    //1200px
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      //> 1800px
+      @content;
+    }
   }
 }

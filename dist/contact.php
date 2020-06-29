@@ -4,13 +4,13 @@
     $visitor_email = $_POST['email'];
     $message = $_POST['message'];
 
-    $email_from = 'yakuaken@gmail.com';
+    $email_from = 'harimtanko@gmail.com';
     
     $email_subject = "New Form Submission";
 
-    $email_body = "User Name: $name.\n".
-                    "User Email: $visitor_email.\n".
-                      "User Message: $message.\n";
+    $email_body = "User name: $name.\n".
+                    "User email: $visitor_email.\n".
+                      "User message: $message.\n";
 
    
     $to = "yakuaken@gmail.com";
@@ -19,7 +19,7 @@
 
     $headers .= "Reply-to: $visitor_email \r\n";
 
-    mail($to, $email_subject,$email_body,$headers);
+    mail($to,$email_subject,$email_body,$headers);
 
     header("Location: index.html");
     

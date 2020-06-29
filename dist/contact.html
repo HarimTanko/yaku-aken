@@ -19,9 +19,7 @@
   </head>
   <body id="about_body">
     <header class="header">
-      <div class="header__logo-box">
-        <img src="img/yaku-logo-2.png" alt="logo" class="header__logo" />
-      </div>
+     
 
       <div class="menu-btn">
         <div class="btn-line"></div>
@@ -56,13 +54,13 @@
       </div>
 
       <div class="contact__form">
-        <form action="contact.php" method="post">
+        <form action="contact.php" method="POST">
           <input type="text" placeholder="Name" name="name" required />
-          <input type="email" placeholder="Email" name="mail" required/>
+          <input type="text" placeholder="Email" name="mail" required/>
          
           <textarea name="message" id="" cols="95" rows="7" placeholder="Message" required></textarea>
         
-          <input type="submit" name="submit" value="SEND MESSAGE" class="contact__form-btn"></input>
+          <input class="contact__form-btn" type="submit" name="submit" value="SEND MESSAGE"></input>
         </form>
         
       </div>
