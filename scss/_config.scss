@@ -6,7 +6,11 @@ $light-green: #7ed56fa8;
 $dark-green: #28b483a6;
 $header-color: linear-gradient(to right bottom, #7ed56fa8, #28b483a6);
 $show-landing-image: true;
-$landing-image: linear-gradient(to right bottom, #7ed56fa8, #28b483a6),
+$landing-image: linear-gradient(
+    to right bottom,
+    hsla(111, 55%, 64%, 0.9),
+    hsla(159, 64%, 43%, 0.9)
+  ),
   url(../img/rice-2.jpg);
 $background-opacity: 0.9;
 
@@ -21,5 +25,35 @@ $background-opacity: 0.9;
       background-attachment: fixed;
       background-size: cover;
     }
+  }
+}
+
+@mixin mediaSm {
+  @media screen and (max-width: 700px) {
+    @content;
+  }
+}
+
+@mixin mediacs {
+  @media screen and (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 1000px) and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1200px) {
+    @content;
   }
 }

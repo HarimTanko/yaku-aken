@@ -1,0 +1,90 @@
+.product {
+  margin: 1rem;
+  &__header {
+    height: 70vh;
+    background-image: $landing-image;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10rem;
+    border-radius: 5px;
+  }
+
+  &__heading {
+    font-size: 12rem;
+    font-weight: 100;
+    color: #fff;
+    padding: 5px 5rem;
+    border-radius: 5px;
+    // box-shadow: 0 5rem 5rem rgba($color: #000000, $alpha: 0.3);
+    //border: 1px solid $gold-color;
+    //background-color: #9ab59d;
+
+    span {
+      color: $gold-color;
+    }
+
+    &-2 {
+      font-size: 4.5rem;
+      font-weight: 300;
+    }
+
+    &-3 {
+      font-size: 7.5rem;
+      text-align: center;
+      font-weight: 300;
+      margin-bottom: 5rem;
+      color: $gold-color;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5rem;
+    padding: 3rem;
+  }
+
+  &__image {
+    width: 35%;
+    margin-right: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba($color: #000000, $alpha: 0.2);
+  }
+
+  &__text {
+    font-size: 2rem;
+    font-weight: 100;
+  }
+}
+
+.services {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(26, 112, 145, 0.7),
+      rgba(2, 49, 99, 0.7)
+    ),
+    url(../img/business.jpg);
+  background-size: cover;
+  background-position: center bottom;
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 8rem;
+  &__header {
+  }
+
+  &__heading {
+    font-size: 12rem;
+    font-weight: 100;
+    width: max-content;
+    color: #fff;
+
+    span {
+      color: $gold-color;
+    }
+  }
+}

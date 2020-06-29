@@ -15,12 +15,12 @@
     />
 
     <link rel="stylesheet" href="css/main.css" />
-    <title>About Yaku Aken</title>
+    <title>Contact Us</title>
   </head>
   <body id="about_body">
     <header class="header">
       <div class="header__logo-box">
-       <!--<img src="img/yaku-logo-2.png" alt="logo" class="header__logo" />--> 
+        <img src="img/yaku-logo-2.png" alt="logo" class="header__logo" />
       </div>
 
       <div class="menu-btn">
@@ -50,64 +50,23 @@
       </nav>
     </header>
 
-   <div class="heady"> 
-    <div class="head__picture">
-      <h1 class="about__heading">About <span>Us</span></h1>
-    </div>
-   </div>
-    
-
-
-    <div class="about">
-      <div class="about__item ">
-        <p class="paragraph">
-          Yaku-Aken is an agribusiness company located in Jalingo, Taraba state
-          for the purpose of farming, food processing and consultancy. The
-          company owns a number of large sized farms in a number of areas in
-          taraba state, including Karim-lamido, Gassol, Kona and Takum LGAs.
-          Committing to the best practices and high standards we produce, high
-          quality Rice seeds, Sesame seeds, Maize and Palm.
-        </p>
-
-        <div class="about__img">
-          <img src="img/aerial-rice.jpg" alt="" />
-          <img src="img/farm-view.jpg" alt="" />
-          <img src="img/rice.jpg" alt="" />
-          <img src="img/single-rice.jpg" alt="" />
-        </div>
-      </div>
-      <div class="about__item">
-        <div class="about__img">
-          <img src="img/milled-rice.jpg" alt="" />
-          <img src="img/rice-mill.jpg" alt="" />
-          <img src="img/tractor.jpg" alt="" />
-          <img src="img/truck.png" alt="" />
-        </div>
-
-        <p class="paragraph paragraph-2">
-          In the field of proceessing we use the best standards in milling our
-          Paddy rice to get high quality long grain milled rice for retail,
-          wholesale and export, we also processs the palm we harvest into high
-          quality palm oil for wholesale and retail.
-        </p>
+    <section class="contact">
+      <div>
+        <h1 class="contact__header">Contact Us</h1>
       </div>
 
-      <div class="about__item">
-        <p class="paragraph">
-          Our team of highly trained and experienced project coordinators also
-          consult and collaborate with small and large scale farmers to help
-          meet their full potential.
-        </p>
-
-        <div class="about__img">
-          <img src="img/business.jpg" alt="" />
-          <img src="img/consult.jpg" alt="" />
-          <img src="img/shake.jpg" alt="" />
-          <img src="img/fertilize.jpg" alt="" />
-        </div>
+      <div class="contact__form">
+        <form action="contact.php" method="post">
+          <input type="text" placeholder="Name" name="name" required />
+          <input type="email" placeholder="Email" name="mail" required/>
+         
+          <textarea name="message" id="" cols="95" rows="7" placeholder="Message" required></textarea>
+        
+          <input type="submit" name="submit" value="SEND MESSAGE" class="contact__form-btn"></input>
+        </form>
+        
       </div>
-    </div>
-
+    </section>
     <footer class="footer">
       <div class="footer__logo-box">
         <img src="img/yaku-logo.png" alt="" class="footer__logo" />

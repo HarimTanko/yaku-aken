@@ -1,0 +1,201 @@
+// Widescreens
+
+@include mediaXl {
+}
+
+// dESKTOPS AND LAPTOPS
+
+@include mediaLg {
+  .about {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .product {
+    display: flex;
+    flex-flow: column;
+  }
+}
+
+// TABLETS
+
+@include mediaMd {
+  .about {
+    &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .paragraph {
+        margin-bottom: 3rem;
+      }
+
+      .paragraph-2 {
+        order: -1;
+      }
+    }
+  }
+
+  .product {
+    &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__text {
+      margin-bottom: 3rem;
+    }
+
+    &__text-2 {
+      order: -1;
+    }
+
+    &__image {
+    }
+  }
+
+  .heady {
+    display: grid;
+  }
+  .head__picture {
+    margin-bottom: 10rem;
+    max-width: 99%;
+    //margin: auto;
+    overflow-x: hidden;
+  }
+
+  .footer {
+    padding: 0 2%;
+    display: flex;
+    flex-direction: column;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+
+    &__address {
+      text-align: center;
+
+      .fa-map-marker {
+        transform: translateX(5rem);
+      }
+    }
+  }
+}
+
+// PHONES
+
+@include mediaSm {
+  .landing {
+    text-align: center;
+
+    &__text-lg {
+      margin-top: 10rem;
+    }
+    &__btn {
+      align-self: center;
+    }
+  }
+
+  .menu-btn {
+    margin-right: 2rem;
+  }
+
+  .header {
+  }
+
+  .heady {
+    width: auto;
+  }
+  .head__picture {
+    margin-bottom: 10rem;
+    width: 96%;
+    padding: 0 2%;
+    overflow-x: hidden;
+  }
+
+  .about {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    &__heading {
+      text-align: center;
+    }
+    &__img {
+      margin-bottom: 5rem;
+      img {
+        width: 17rem;
+      }
+    }
+
+    &__item {
+      margin: 0 2rem;
+      padding: 0 2rem;
+    }
+  }
+
+  #about_body {
+    overflow-x: hidden;
+  }
+
+  .footer {
+    padding: 0 2%;
+    display: flex;
+    flex-direction: column;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+
+    &__address {
+      text-align: center;
+
+      .fa-map-marker {
+        transform: translateX(5rem);
+      }
+    }
+  }
+}
+
+@include mediacs {
+  .contact {
+    text-align: center;
+    &__header {
+      margin-bottom: 5rem;
+      line-height: 1;
+      padding-bottom: 5rem;
+    }
+
+    &__form {
+      margin-top: 10rem;
+      width: 40rem;
+
+      textarea {
+        width: 35rem;
+      }
+    }
+  }
+}

@@ -1,5 +1,8 @@
 @import "config";
 @import "menu";
+@import "product";
+@import "contact";
+@import "footer";
 
 html {
   font-size: 10px;
@@ -39,11 +42,10 @@ h3 {
     url(../img/rice-2.jpg);*/
   background-size: cover;
   height: 100vh;
-  overflow: hidden;
 
   &__text-lg {
     font-size: 15rem;
-    font-weight: 300;
+    font-weight: 100;
     color: #fff;
 
     span {
@@ -53,7 +55,7 @@ h3 {
 
   &__text-md {
     font-size: 7.5rem;
-    font-weight: 300;
+    font-weight: 100;
     color: #fff;
     margin-bottom: 5rem;
   }
@@ -69,6 +71,7 @@ h3 {
     background: #fff;
     width: max-content;
     font-size: 3rem;
+    font-weight: 100;
     padding: 1rem 3rem;
     border-radius: 2rem;
     margin-top: 3rem;
@@ -108,27 +111,23 @@ a {
 }
 
 .head__picture {
-  height: 40vh;
+  height: 70vh;
 
   background-image: linear-gradient(
-    to right bottom,
-    rgba(126, 213, 111, 0.657),
-    rgba(40, 180, 131, 0.65)
-  );
+      to right bottom,
+      hsla(111, 55%, 64%, 0.883),
+      hsla(159, 64%, 43%, 0.863)
+    ),
+    url(../img/rice-2.jpg);
   margin: 1rem;
   border-radius: 1rem;
-  display: block;
+  //display: block;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .about {
-  background-image: linear-gradient(
-    to right bottom,
-    rgba(126, 213, 111, 0.657),
-    rgba(40, 180, 131, 0.65)
-  );
   margin: 1rem;
   border-radius: 1rem;
 
@@ -151,14 +150,14 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 0.5rem;
-    width: max-content;
+    width: auto;
     margin: 1rem;
 
     img {
       width: 25rem;
       height: 15rem;
       border-radius: 1rem;
-      box-shadow: 1rem 3rem 6rem rgba($color: #000000, $alpha: 0.3);
+      box-shadow: 1rem 2rem 4rem rgba($color: #000000, $alpha: 0.3);
     }
   }
 }
@@ -169,9 +168,8 @@ a {
   color: #fff;
   padding: 5px 5rem;
   border-radius: 5px;
-  box-shadow: 0 5rem 5rem rgba($color: #000000, $alpha: 0.3);
-  border: 1px solid $gold-color;
-  background-color: #9ab59d;
+  //box-shadow: 0 5rem 5rem rgba($color: #000000, $alpha: 0.3);
+  //  border: 1px solid $gold-color;
 
   span {
     color: $gold-color;
@@ -183,34 +181,13 @@ a {
 }
 
 .paragraph {
-  font-size: 1.5rem;
-}
-
-.about__features {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.feature-box {
-  background-image: linear-gradient(to right bottom, #7ed56fa8, #28b483a6);
-  font-size: 1.5rem;
-  padding: 2.5rem;
-  margin: 2rem;
-  text-align: center;
-  border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba(#000000, 0.15);
-  transition: transform 0.3s;
-
-  &:hover {
-    transform: translateY(-1rem);
-  }
-
-  &__icon {
-    color: $gold-color;
-  }
+  font-size: 2rem;
+  font-weight: 100;
 }
 
 .header__logo {
   height: 15rem;
   margin-left: 2rem;
 }
+
+@import "mobile";

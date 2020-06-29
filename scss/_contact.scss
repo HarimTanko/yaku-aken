@@ -1,0 +1,88 @@
+.contact {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+      to bottom,
+      hsla(111, 55%, 64%, 0.602),
+      hsla(159, 64%, 43%, 0.616)
+    ),
+    url(../img/farm-view.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  display: table;
+
+  &__header {
+    text-align: center;
+    font-size: 9rem;
+    font-weight: 300;
+    color: #fff;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__form {
+    margin-top: 8rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+
+    input {
+      font-size: 2rem;
+      width: 100%;
+      margin: 2rem 0;
+      background: rgba(0, 0, 0, 0);
+      border: none;
+      outline: none;
+      border-bottom: 1px solid #fff;
+      color: #fff;
+    }
+  }
+}
+
+.contact__form {
+  textarea {
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    outline: none;
+    background: linear-gradient(
+      rgba(66, 143, 89, 0.034),
+      rgba(141, 194, 157, 0.452)
+    );
+  }
+
+  &-btn {
+    background: hsl(159, 64%, 43%);
+    border-color: transparent;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 100;
+    letter-spacing: 2px;
+    height: 5rem;
+    margin-top: 2rem;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #3e9c5a;
+      cursor: pointer;
+    }
+  }
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+#msg {
+  margin-top: 12rem;
+  height: 7rem;
+}
