@@ -23,7 +23,11 @@
     @include respond(phone) {
       letter-spacing: 1rem;
       font-size: 7rem;
-      margin-top: 10rem;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     span {
@@ -33,6 +37,10 @@
     &-2 {
       font-size: 4.5rem;
       font-weight: 300;
+
+      @include respond(phone) {
+        text-align: center;
+      }
     }
 
     &-3 {
@@ -49,6 +57,17 @@
     align-items: center;
     margin-bottom: 3rem;
     padding: 3rem;
+
+    @include respond(phone) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__item-order {
+    order: -1;
   }
 
   &__image {
@@ -56,11 +75,31 @@
     margin-right: 2rem;
     border-radius: 5px;
     box-shadow: 0 3rem 5rem rgba($color: #000000, $alpha: 0.2);
+
+    @include respond(phone) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+      margin: 0;
+    }
   }
 
   &__text {
     font-size: 2rem;
     font-weight: 100;
+
+    @include respond(phone) {
+      text-align: center;
+    }
+  }
+
+  &__text-2 {
+    @include respond(phone) {
+      order: -1;
+    }
   }
 }
 
@@ -79,7 +118,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
 
   @include respond(phone) {
     height: 40vh;

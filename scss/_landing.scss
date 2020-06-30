@@ -85,5 +85,11 @@ a {
   &__logo {
     height: 15rem;
     width: 15rem;
+
+    @include respond(phone) {
+      height: 9.5rem;
+      width: 9.5rem;
+      margin-left: 1rem;
+    }
   }
 }
